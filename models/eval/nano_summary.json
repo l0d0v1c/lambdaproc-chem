@@ -1,0 +1,12 @@
+{
+  "model": "models/nano/best",
+  "split": "test",
+  "targets": 1000,
+  "valid_lproc": 0.999,
+  "valid_smiles": 0.966,
+  "elements_ok": 0.927,
+  "reactant_recall": 0.1536,
+  "ops_exact": 0.004,
+  "exact": 0.0,
+  "bb_recall": 0.1419
+}

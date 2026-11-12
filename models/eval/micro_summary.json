@@ -1,0 +1,12 @@
+{
+  "model": "models/micro/best",
+  "split": "test",
+  "targets": 1000,
+  "valid_lproc": 0.995,
+  "valid_smiles": 0.984,
+  "elements_ok": 0.969,
+  "reactant_recall": 0.217,
+  "ops_exact": 0.003,
+  "exact": 0.0,
+  "bb_recall": 0.2307
+}

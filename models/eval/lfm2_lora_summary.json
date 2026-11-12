@@ -1,0 +1,15 @@
+{
+  "model": "LiquidAI/LFM2-350M",
+  "adapter": "models/lfm2_lora",
+  "split": "test",
+  "targets": 300,
+  "mode": "greedy",
+  "valid_lproc": 0.83,
+  "valid_smiles": 0.8,
+  "elements_ok": 0.7133,
+  "kept": 0.71,
+  "reactant_recall": 0.0369,
+  "ops_exact": 0.0,
+  "exact": 0.0,
+  "bb_recall": 0.0215
+}

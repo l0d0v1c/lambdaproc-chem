@@ -1,0 +1,12 @@
+{
+  "model": "models/small/best",
+  "split": "test",
+  "targets": 1000,
+  "valid_lproc": 0.998,
+  "valid_smiles": 0.988,
+  "elements_ok": 0.974,
+  "reactant_recall": 0.2528,
+  "ops_exact": 0.003,
+  "exact": 0.0,
+  "bb_recall": 0.2627
+}

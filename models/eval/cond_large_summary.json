@@ -1,0 +1,18 @@
+{
+  "model": "models/cond/best",
+  "split": "test",
+  "targets": 1000,
+  "sample": false,
+  "mode": "greedy",
+  "inventory": true,
+  "valid_lproc": 0.942,
+  "valid_smiles": 0.913,
+  "elements_ok": 0.878,
+  "kept": 0.854,
+  "reactant_recall": 0.705,
+  "bb_recall": 0.6709,
+  "ops_exact": 0.003,
+  "exact": 0.0,
+  "inv_precision": 0.6015,
+  "inv_recall": 0.8626
+}

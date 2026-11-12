@@ -1,0 +1,11 @@
+{
+  "model": "models/micro_mats/best",
+  "view": "mats",
+  "targets": 1000,
+  "parser_checkable": false,
+  "valid_smiles": 0.99,
+  "elements_ok": 0.968,
+  "reactant_recall": 0.2254,
+  "bb_recall": 0.2407,
+  "valid_lproc": 0.0
+}

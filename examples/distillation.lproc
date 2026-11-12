@@ -1,0 +1,15 @@
+; Distillation of a fermented wort — preheat, then packed column.
+; The two defs consume the two outputs of THE SAME column:
+; (D (EC78 wort)) occurs twice in the text, once in the DAG.
+
+(use
+  (EC 6.01)                       ; shell-and-tube exchanger — preheat
+  (D  5.02 (distillate residue))) ; packed distillation column
+
+(mat
+  (wort "fermented wort"))
+
+(def spirit  (distillate (D (EC78 wort))))
+(def bottoms (residue    (D (EC78 wort))))
+
+spirit

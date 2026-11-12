@@ -1,0 +1,19 @@
+# LambdaProc itself (src/lambdaproc) needs NOTHING but the Python >= 3.9
+# standard library. The lines below are for the model, the demo app and the
+# corpus pipeline.
+
+# --- interactive app --------------------------------------------------
+streamlit>=1.40
+
+# --- model: training, evaluation, generation (Apple silicon) ----------
+mlx>=0.25
+numpy>=1.26
+
+# --- chemistry: SMILES parsing, canonicalisation, drawing -------------
+rdkit>=2024.3
+
+# --- corpus pipeline (only needed to rebuild the corpus from patents) -
+py7zr>=1.0
+
+# --- pretrained baseline (only needed to reproduce section 5.4) -------
+# mlx-lm>=0.20

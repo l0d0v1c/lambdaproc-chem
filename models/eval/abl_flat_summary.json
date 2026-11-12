@@ -1,0 +1,11 @@
+{
+  "model": "models/micro_flat/best",
+  "view": "flat",
+  "targets": 1000,
+  "parser_checkable": false,
+  "valid_smiles": 0.99,
+  "elements_ok": 0.963,
+  "reactant_recall": 0.2197,
+  "bb_recall": 0.232,
+  "valid_lproc": 0.0
+}

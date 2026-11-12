@@ -1,0 +1,16 @@
+{
+  "model": "LiquidAI/LFM2-350M",
+  "adapter": "/tmp/scratch/f5_8000",
+  "split": "test",
+  "targets": 300,
+  "mode": "greedy",
+  "sample": false,
+  "valid_lproc": 0.9933,
+  "valid_smiles": 0.94,
+  "elements_ok": 0.9,
+  "kept": 0.8733,
+  "reactant_recall": 0.0613,
+  "ops_exact": 0.0,
+  "exact": 0.0,
+  "bb_recall": 0.0602
+}

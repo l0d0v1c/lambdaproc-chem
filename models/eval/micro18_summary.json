@@ -1,0 +1,15 @@
+{
+  "model": "models/micro18/best",
+  "split": "test",
+  "targets": 1000,
+  "mode": "greedy",
+  "inventory": false,
+  "valid_lproc": 0.998,
+  "valid_smiles": 0.984,
+  "elements_ok": 0.964,
+  "kept": 0.959,
+  "reactant_recall": 0.2525,
+  "ops_exact": 0.005,
+  "exact": 0.0,
+  "bb_recall": 0.2661
+}

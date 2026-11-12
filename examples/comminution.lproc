@@ -1,0 +1,15 @@
+; Ore comminution train — crushing, grinding, screening.
+; The screen has several outputs: here both are consumed, from one node.
+
+(use
+  (CC 1.01)                 ; jaw crusher
+  (BB 1.07)                 ; ball mill
+  (TV 4.01 (fines coarse))) ; vibrating screen
+
+(mat
+  (ore "run-of-mine ore"))
+
+(def fine-powder (fines  (TV (BB (CC ore)))))
+(def oversize    (coarse (TV (BB (CC ore)))))  ; same screen: shared DAG node
+
+fine-powder

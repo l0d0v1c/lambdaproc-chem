@@ -1,0 +1,53 @@
+{
+  "evaluation": "models/eval/micro18_bo10_full.jsonl",
+  "key": "bb_recall",
+  "targets": 300,
+  "mean_candidates": 9.2,
+  "mean_distinct_quality": 1.91,
+  "greedy": 0.26,
+  "random_survivor": 0.1796,
+  "oracle": 0.4215,
+  "rules": {
+    "+score": 0.2648,
+    "-score": 0.1304,
+    "+max_sim": 0.1236,
+    "-max_sim": 0.1102,
+    "+mean_sim": 0.1463,
+    "-mean_sim": 0.1313,
+    "+sum_sim": 0.1456,
+    "-sum_sim": 0.0717,
+    "+n_blocks": 0.1983,
+    "-n_blocks": 0.1375,
+    "+n_mats": 0.2012,
+    "-n_mats": 0.1752
+  },
+  "within_target_rho": {
+    "score": [
+      0.1739,
+      0.0545
+    ],
+    "max_sim": [
+      0.0469,
+      0.075
+    ],
+    "mean_sim": [
+      0.0223,
+      0.0637
+    ],
+    "sum_sim": [
+      0.1629,
+      0.0608
+    ],
+    "n_blocks": [
+      0.1349,
+      0.0575
+    ],
+    "n_mats": [
+      0.0507,
+      0.0538
+    ]
+  },
+  "best_rule": "+score",
+  "best_rule_score": 0.2648,
+  "headroom_unclaimed": 0.1567
+}

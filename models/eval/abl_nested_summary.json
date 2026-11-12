@@ -1,0 +1,11 @@
+{
+  "model": "models/micro/best",
+  "view": "nested",
+  "targets": 1000,
+  "parser_checkable": true,
+  "valid_smiles": 0.988,
+  "elements_ok": 0.972,
+  "reactant_recall": 0.216,
+  "bb_recall": 0.2307,
+  "valid_lproc": 0.995
+}

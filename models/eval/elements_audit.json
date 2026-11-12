@@ -1,0 +1,11 @@
+{
+  "targets": 1000,
+  "free_elements_ok": 0.9645,
+  "cond_elements_ok": 0.918,
+  "ceiling_shelf_plus_solvents": 0.944,
+  "failures_shelf_could_not_cover": 24,
+  "failures_skipped_true_reactant": 10,
+  "failures_skipped_distractor_only": 48,
+  "materials_used_cond": 3.19,
+  "materials_used_free": 3.062
+}

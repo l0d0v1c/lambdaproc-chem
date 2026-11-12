@@ -1,0 +1,30 @@
+{
+  "retrieval": {
+    "baseline": "nearest-neighbour retrieval",
+    "split": "test",
+    "targets": 1000,
+    "topk": 10,
+    "fingerprint": "Morgan r=2 2048 bits",
+    "mean_similarity": 0.704,
+    "valid_lproc": 1.0,
+    "valid_smiles": 1.0,
+    "elements_ok": 0.831,
+    "kept": 0.831,
+    "reactant_recall": 0.2329,
+    "ops_exact": 0.086,
+    "exact": 0.006,
+    "recall_oracle": 0.4617,
+    "bb_recall": 0.1796
+  },
+  "frequency_floor": {
+    "baseline": "4 most frequent materials",
+    "targets": 1000,
+    "valid_lproc": 1.0,
+    "valid_smiles": 1.0,
+    "elements_ok": 0.508,
+    "kept": 0.508,
+    "reactant_recall": 0.1329,
+    "ops_exact": 0.0,
+    "exact": 0.0
+  }
+}

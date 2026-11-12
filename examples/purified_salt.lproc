@@ -1,0 +1,24 @@
+; Salt purification by recrystallisation — real ids from machines_procedes.json.
+; Illustrates multiple outputs (named selectors) and a parameterised
+; sub-process (lambda).
+
+(use
+  (AG 3.08)                        ; propeller agitator — dissolution
+  (K  13.01 (crystals liquor))     ; forced-circulation crystalliser
+  (FN 4.12  (cake filtrate))       ; Nutsche filter
+  (SE 7.02  (dried air)))          ; fluid-bed dryer
+
+(mat
+  (raw-salt "wet raw salt")
+  (water "demineralised water"))
+
+; Reusable sub-process: crystallise a brine, filter it, dry it.
+; The index on SE is indicative (drying temperature, °C).
+(def recrystallise
+  (lambda (brine)
+    (dried (SE60 (cake (FN (crystals (K brine))))))))
+
+(def mother-brine (AG raw-salt100 water300))
+(def pure-salt (recrystallise mother-brine))
+
+pure-salt
