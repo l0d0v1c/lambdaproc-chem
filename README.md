@@ -23,9 +23,9 @@ mentions of the same expression denote the same physical node.
 ```
 
 This repository accompanies the paper *λproc: a compositional language for
-process description, with a case study in chemical synthesis* (`../main.tex`).
-It contains the language implementation, the training and evaluation code, two
-trained checkpoints, and an interactive application.
+process description, with a case study in chemical synthesis*. It contains
+the language implementation, the training and evaluation code, two trained
+checkpoints, and an interactive application.
 
 ---
 
