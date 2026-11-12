@@ -1,5 +1,7 @@
 # λproc
 
+[![DOI](https://zenodo.org/badge/1455329283.svg)](https://doi.org/10.5281/zenodo.24164140)
+
 A process description language — recipes, formulations, industrial flowsheets,
 chemical synthesis procedures — written as S-expressions, where **unit
 operations are functions over streams**, **sub-processes are named lambdas**,
@@ -161,6 +163,23 @@ python -m lm.evaluate models/micro/best --n 1000
 - **Validity means well-formed, not feasible.** The validator checks the
   structure of a process, not its physics. No procedure in this repository was
   ever run.
+
+## Citing this work
+
+Archived on Zenodo: [doi:10.5281/zenodo.24164140](https://doi.org/10.5281/zenodo.24164140).
+That is the concept DOI and always resolves to the latest version; cite the
+version DOI shown on the Zenodo record if you need to pin one.
+
+```bibtex
+@misc{lambdaprocchem,
+  author       = {Brunet, Luc E.},
+  title        = {{$\lambda$}proc: an {S}-expression language for process
+                  description, with a chemical-synthesis corpus, models and
+                  browser demonstration},
+  year         = {2026},
+  howpublished = {Zenodo, \url{https://doi.org/10.5281/zenodo.24164140}},
+}
+```
 
 ## Licence
 
