@@ -8,7 +8,9 @@ operations are functions over streams**, **sub-processes are named lambdas**,
 and the **process graph emerges from referential transparency**: two textual
 mentions of the same expression denote the same physical node.
 
-**Try** [WebGPU model](https://l0d0v1c.github.io/lambdaproc-chem)
+**Try it in the browser:** [interactive demo](https://l0d0v1c.github.io/lambdaproc-chem)
+-- the published checkpoints and the real validator, running client-side
+under Pyodide (WebAssembly, no server, no GPU).
 
 ```lisp
 (use
