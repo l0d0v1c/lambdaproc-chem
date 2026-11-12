@@ -6,6 +6,8 @@ operations are functions over streams**, **sub-processes are named lambdas**,
 and the **process graph emerges from referential transparency**: two textual
 mentions of the same expression denote the same physical node.
 
+**Try** (WebGOU model)[https://l0d0v1c.github.io/lambdaproc-chem]
+
 ```lisp
 (use
   (K  13.01 (crystals liquor))   ; forced-circulation crystalliser
