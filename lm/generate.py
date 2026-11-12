@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate LambdaProc procedures for target molecules.
+"""Generate λproc procedures for target molecules.
 
     python -m lm.generate models/small/best "CC(=O)Nc1ccc(O)cc1" -n 5 -t 0.8
 

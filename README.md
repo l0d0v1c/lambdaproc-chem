@@ -1,4 +1,4 @@
-# LambdaProc
+# λproc
 
 A process description language — recipes, formulations, industrial flowsheets,
 chemical synthesis procedures — written as S-expressions, where **unit
@@ -20,7 +20,7 @@ mentions of the same expression denote the same physical node.
   (dried (SE60 (cake (FN (crystals (K brine)))))))
 ```
 
-This repository accompanies the paper *LambdaProc: a compositional language for
+This repository accompanies the paper *λproc: a compositional language for
 process description, with a case study in chemical synthesis* (`../main.tex`).
 It contains the language implementation, the training and evaluation code, two
 trained checkpoints, and an interactive application.
@@ -82,7 +82,7 @@ work-up. That is how paracetamol is made.
 | `models/micro18/best/` | 2.73 M params, target → procedure (11 MB) |
 | `models/cond/best/` | 2.74 M params, target + inventory → procedure (11 MB) |
 | `models/eval/` | every number in the paper, as JSON summaries |
-| `scripts/` | patent corpus → LambdaProc converter |
+| `scripts/` | patent corpus → λproc converter |
 | `app.py` | Streamlit application |
 
 ## The models

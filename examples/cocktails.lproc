@@ -1,4 +1,4 @@
-; LambdaProc demonstration corpus: 20 classic cocktails.
+; λproc demonstration corpus: 20 classic cocktails.
 ; Bar operations are not in the industrial machine database: they are
 ; defined freely (a quoted string instead of a machine id).
 ; Indices are indicative (cl for liquids, pieces for the rest).

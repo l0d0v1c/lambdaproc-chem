@@ -1,4 +1,4 @@
-"""LM view of a LambdaProc document: canonical form without the `(use ...)` block.
+"""LM view of a λproc document: canonical form without the `(use ...)` block.
 
 The use block of a USPTO-derived document is a pure function of the operation
 symbols appearing in the body (fixed table ACTION_OPS), so the model never has
@@ -28,7 +28,7 @@ def to_view(canon: str) -> str:
 
 
 def from_view(view: str) -> str:
-    """Rebuild a full LambdaProc document (raises on unknown op symbols)."""
+    """Rebuild a full λproc document (raises on unknown op symbols)."""
     ops = sorted(set(_OP_RE.findall(re.sub(r'"[^"]*"', '""', view))))
     unknown = [o for o in ops if o not in OP_LABELS]
     if unknown:

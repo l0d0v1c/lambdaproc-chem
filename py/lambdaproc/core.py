@@ -1,6 +1,6 @@
-"""LambdaProc core: lexer, parser, AST, canonicalizer, validator, DAG builder.
+"""λproc core: lexer, parser, AST, canonicalizer, validator, DAG builder.
 
-LambdaProc is an S-expression language describing processes (recipes,
+λproc is an S-expression language describing processes (recipes,
 industrial flowsheets) as compositions of unit operations, inspired by
 SMILES/SFILES on the process side and by LISP/lambda calculus on the
 structural side. Pure stdlib, no dependencies.

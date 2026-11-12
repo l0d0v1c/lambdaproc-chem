@@ -4,7 +4,7 @@ The paper claims that writing a procedure as a *composition* does part of the
 work for the model. Testing that claim means training the same model, on the
 same corpus and the same budget, to emit weaker representations:
 
-``nested``  the LambdaProc view (the baseline): materials, then the procedure
+``nested``  the λproc view (the baseline): materials, then the procedure
             as a nested composition --- nesting says which stream each
             operation consumes.
 ``flat``    materials, then a linear action sequence in the style of an

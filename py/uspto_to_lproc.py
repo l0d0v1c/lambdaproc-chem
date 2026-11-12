@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Convert Lowe's USPTO reaction CML files into LambdaProc documents.
+"""Convert Lowe's USPTO reaction CML files into λproc documents.
 
 Source: D. Lowe, "Chemical reactions from US patents (1976-Sep2016)",
 figshare doi:10.6084/m9.figshare.5104873 (CC0). Each <reaction> carries a

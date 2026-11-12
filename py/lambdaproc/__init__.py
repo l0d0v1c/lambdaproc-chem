@@ -1,4 +1,4 @@
-"""LambdaProc: an S-expression language for process description.
+"""λproc: an S-expression language for process description.
 
 Processes (recipes, industrial flowsheets) are written as compositions of
 unit operations bound to a machine database, with lambda-based sub-process

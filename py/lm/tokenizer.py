@@ -1,6 +1,6 @@
 """Lossless tokenizer for the target->procedure LM.
 
-Training line = product SMILES, then the LM view of a LambdaProc document:
+Training line = product SMILES, then the LM view of a λproc document:
 the `(mat ...)` and `(def procede ...)` forms on one line, with the `(use ...)`
 block dropped (it is fully derivable from the operation symbols used, see
 `lm.lmview`). Material labels inside quotes are SMILES.
@@ -28,7 +28,7 @@ SMILES_RE = re.compile(
     r"(\[[^\]]+]|Br?|Cl?|N|O|S|P|F|I|b|c|n|o|s|p|\(|\)|\.|=|#|-|\+|\\|/|:|~|@|\?|>|<|\*|\$|%[0-9]{2}|[0-9])"
 )
 # '|' separates steps in the flat view of the representation ablation
-# (lm.flatview); it never occurs in a LambdaProc document, so it simply never
+# (lm.flatview); it never occurs in a λproc document, so it simply never
 # enters the vocabulary of the nested view.
 LPROC_RE = re.compile(r'\s+|\(|\)|"|[0-9]|\||[A-Za-z][A-Za-z-]*')
 

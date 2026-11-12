@@ -1,4 +1,4 @@
-"""Chemical sanity checks on a LambdaProc document (shared by proposal and eval)."""
+"""Chemical sanity checks on a λproc document (shared by proposal and eval)."""
 
 import re
 

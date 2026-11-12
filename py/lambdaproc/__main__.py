@@ -1,4 +1,4 @@
-"""LambdaProc command-line interface.
+"""λproc command-line interface.
 
 Usage:
     python -m lambdaproc check <file.lproc>... [--db machines_procedes.json]

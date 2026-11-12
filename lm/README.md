@@ -1,7 +1,7 @@
 # Target → procedure LM
 
 A small decoder-only transformer trained from scratch (MLX, Apple Silicon) that
-takes a **target molecule** (SMILES) and writes a **LambdaProc procedure** to
+takes a **target molecule** (SMILES) and writes a **λproc procedure** to
 make it: materials with indicative quantities, and the composition of unit
 operations.
 
@@ -12,7 +12,7 @@ $ python -m lm.generate models/micro/best "CC(=O)Nc1ccc(O)cc1" -n 3 -t 0.8
 ## Pipeline
 
 ```bash
-# 1. corpus: USPTO grants (CC0) -> (product SMILES, LambdaProc) pairs
+# 1. corpus: USPTO grants (CC0) -> (product SMILES, λproc) pairs
 python scripts/run_full_uspto.py --smiles          # 700 149 unique pairs
 # 2. tokens: split by target molecule (unseen targets in val/test)
 python -m lm.prepare                               # data/lm/, vocab 391

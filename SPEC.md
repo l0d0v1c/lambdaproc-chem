@@ -1,6 +1,6 @@
-# LambdaProc — specification v0.1
+# λproc — specification v0.1
 
-LambdaProc is a process description language: recipes, formulations, industrial
+λproc is a process description language: recipes, formulations, industrial
 flowsheets. A process is written as a **composition of functions**: each unit
 operation is a function `stream → stream`, sub-processes are named lambdas, and
 the process graph (a DAG) emerges from **referential transparency** — two
@@ -16,7 +16,7 @@ structure.
 ## 1. Model
 
 - **Stream**: matter in circulation (solid, liquid, gas, mixture). Every
-  LambdaProc expression denotes a stream, or a tuple of streams.
+  λproc expression denotes a stream, or a tuple of streams.
 - **Unit operation**: a function taking one or more streams and returning one
   or more streams. Operations are bound, in a preamble, either to a machine of
   the `machines_procedes.json` database (444 machines, 24 categories, described
@@ -83,7 +83,7 @@ SYMIDX    = SYM [ DIGITS ] ;
 - **Macros**: `(def name expr)` creates a nullary macro usable as an atom;
   `(def name (lambda (p…) expr))` creates a parameterised sub-process, called
   as `(name arg…)` with exact arity. No recursion and no higher order in v0.1:
-  LambdaProc describes, it does not compute.
+  λproc describes, it does not compute.
 - **`:minor`**: an additive material (a colourant, a dash of bitters),
   inherited from FSL's minor-component concept; informative in v0.1.
 - **`:comm`**: a commutative operation (the order of incoming streams is

@@ -1,4 +1,4 @@
-"""LambdaProc test suite: round-trip, canonicalization, validation, DAG."""
+"""λproc test suite: round-trip, canonicalization, validation, DAG."""
 
 import glob
 import os

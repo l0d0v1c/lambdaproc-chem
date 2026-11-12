@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Full USPTO grants (1976-Sep2016) -> LambdaProc JSONL corpus.
+"""Full USPTO grants (1976-Sep2016) -> λproc JSONL corpus.
 
 Extracts data/uspto/grants_cml.7z once, converts year by year (deleting
 each year's XML right after conversion to cap disk usage), writes one
