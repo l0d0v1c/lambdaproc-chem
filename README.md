@@ -32,7 +32,7 @@ trained checkpoints, and an interactive application.
 ### The language alone — no dependencies
 
 ```bash
-PYTHONPATH=src python -m lambdaproc check examples/*.lproc --db machines_procedes.json
+PYTHONPATH=src python -m lambdaproc check examples/*.lproc
 PYTHONPATH=src python -m lambdaproc canon examples/distillation.lproc
 PYTHONPATH=src python -m lambdaproc stats examples/*.lproc
 PYTHONPATH=src python -m pytest tests -q
@@ -76,7 +76,6 @@ work-up. That is how paracetamol is made.
 | `SPEC.md` | language reference |
 | `examples/` | 20 cocktails and three industrial processes |
 | `tests/` | 19 tests: round trip, canonical form, validation, DAG |
-| `machines_procedes.json` | 444 unit operations in 24 categories |
 | `lm/` | tokeniser, model, training, evaluation, generation |
 | `lm/numpy_model.py` | pure-NumPy forward pass — runs under Pyodide, verified token-for-token against MLX |
 | `models/micro18/best/` | 2.73 M params, target → procedure (11 MB) |
@@ -137,10 +136,16 @@ python -m lm.evaluate models/micro/best --n 1000
 - **`procede`.** The shipped checkpoints emit the definition name `procede`
   (French), because the corpus was built that way. It is an ordinary symbol,
   not a keyword — renaming it would require retraining, so it was left alone.
-- **The machine database is in French.** `machines_procedes.json` comes from
-  earlier work and its 444 labels have not been translated. The language, the
-  specification, the examples and the operation labels used by the chemistry
-  pipeline are in English.
+- **The machine database is not distributed here.** A `use` binding may name
+  a machine id (`(use (EC 6.01))`) instead of a free-text definition, and
+  `machines_procedes.json` -- 444 unit operations in 24 categories, from
+  earlier work, labels in French -- is what checks that the id exists. It is
+  optional: documents parse, canonicalise and validate without it, only the
+  ids go unchecked, which is what the `no-db` in the CLI output means. Pass
+  `--db <path>` if you have it; the two tests that need it skip otherwise.
+  None of this touches the chemistry: not one of the 6211 documents in the
+  corpus names a machine id, so the model, the demo and every number in the
+  paper are independent of it.
 - **The conditioned model wants a realistic shelf.** It was trained on
   inventories holding the true reactants *plus at least as many distractors*,
   so give it four entries or more. With two correct reactants and nothing else

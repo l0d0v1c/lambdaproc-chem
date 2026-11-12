@@ -12,7 +12,14 @@ from lambdaproc import (  # noqa: E402
     ParseError, canonical, load_machines, parse, to_dag, validate,
 )
 
-DB = load_machines(os.path.join(ROOT, "machines_procedes.json"))
+# The machine database is the industrial half of the language: it maps a
+# `(use (EC 6.01))` binding to a catalogue entry. It is optional -- a document
+# parses, canonicalises and validates without it, only the machine ids go
+# unchecked -- and it is not distributed with every copy of this repository,
+# so the two tests that need it skip rather than fail.
+_DB_PATH = os.path.join(ROOT, "machines_procedes.json")
+DB = load_machines(_DB_PATH) if os.path.exists(_DB_PATH) else None
+needs_db = unittest.skipIf(DB is None, "machines_procedes.json not present")
 EXAMPLES = sorted(glob.glob(os.path.join(ROOT, "examples", "*.lproc")))
 
 PREAMBLE = """
@@ -25,6 +32,7 @@ class TestExamples(unittest.TestCase):
     def test_examples_exist(self):
         self.assertGreaterEqual(len(EXAMPLES), 4)
 
+    @needs_db
     def test_examples_valid_against_db(self):
         for path in EXAMPLES:
             with open(path, encoding="utf-8") as fh:
@@ -77,6 +85,7 @@ class TestValidator(unittest.TestCase):
         v = self.check("(def x (M a zz))")
         self.assertTrue(any("undeclared symbol 'zz'" in e for e in v.errors))
 
+    @needs_db
     def test_unknown_machine_id(self):
         v = validate(parse('(use (Z 99.99))(mat (a "A"))(def x (Z a))'), DB)
         self.assertTrue(any("99.99" in e for e in v.errors))
